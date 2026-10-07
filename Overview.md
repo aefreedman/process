@@ -24,39 +24,43 @@
 - Do the part you enjoy doing
 - Do the weird thing
 ## Overall Strategy
-Friction is useful. A great way to learn is to avoid automating everything right from the beginning. Figure out what happens at each stage and build up from there.
+Friction is useful. A great way to learn is to avoid automating everything right away. Learn what happens at each stage and build up from there. Remember, at any point you can always work with an agent to learn something!
+
+How do you avoid slop? 
+* If something doesn't exist yet: I want the agent to ***ask me*** what should exist.
+* If something already exists: I want the agent to ***tell me*** what it is. 
 ## General Development Loop
-1. Pick a task from my backlog and iterate on a plan with an agent. I'm looking for a plan that aligns with my expectations of what I want to happen and is of an appropriate scope.
-	- It's useful to use the "interview me" method if the task outline isn't robust. I typically limit it to five questions, and I make sure to tell the agent what I want it to focus the questions on. My goal here is to avoid the agent making its own decision on something I don't want it to.
+1. I pick a task from my backlog and iterate on a plan with an agent. I'm looking for a plan that aligns with my expectations and is of an appropriate scope.
+	- If the initial feature description is poorly defined, I have the agent check for relevant context and ask me a few targeted questions. I make sure to tell the agent what I want it to focus on. My goal is to get my intent into context, so the agent doesn't make its own decision. Often, agents will return with recommended answers. If you're not good at ignoring suggestions, you might want to tell it not to do that.
 	- Decide on a "definition of done" here. Have an expectation of what you want to happen and what is or isn't acceptable. This is about giving yourself permission to finish working on this task and move on.
-	- See my [effort estimation rubric](https://github.com/aefreedman/pi-project-management/blob/main/skills/estimating-effort/references/scoring-model.md) for an idea of how I scope tasks. The general rule-of-thumb is "effort: 3" is your target. Don't use time to estimate anything.
+	- See my [effort estimation rubric](https://github.com/aefreedman/pi-project-management/blob/main/skills/estimating-effort/references/scoring-model.md) for an idea of how I estimate scope. My rule-of-thumb is "effort: 3" is the target. Effort is not a measure of time. 
 	- My plans always include test coverage. Depending on your setup, you may need to explicitly tell agents to add test coverage.
 	- Think _really really_ hard if there's a better way to do what you're about to do. Current models are trained to do what you tell them to do, and they'll try their best to finish a task that is impossible.
 2. Record the feature description, plan, spec, whatever somewhere outside of the agent session. For example, a summary goes in my project tracker, and a more detailed plan is written to a .md file.
 3. Execute the plan. All work always happens on its own branch.
 	- I have my workflow set up to automatically test and review and fix errors until the task is provably complete. _This may not be the best choice for you_.
 	- Be careful with tasks involving input handling or visual changes.
-4. This is where I switch to another task, either starting or finishing a loop.
-5. Developer playtesting and review. Depending on the task, this can be very quick, or the longest part of the whole process.
-	- It doesn't need to be perfect, it needs to be _done_. What was your definition of done at the beginning?
-	- I try to avoid extended variable tweaking sessions. It can be slow, frustrating, and a poor use of tokens. I'd rather tune by hand and then have the agent check that I didn't break something and run validation.
+4. This is where I switch to another task. I may start or finish another loop. _Or, take a break or something._
+5. Developer playtesting and review. Depending on the task, this can be quick or the longest part of the whole process.
+	- It doesn't need to be perfect; it needs to be _done_. What was your definition of done at the beginning?
+	- I avoid extended variable tweaking sessions. It can be slow, frustrating, and a poor use of tokens. I'd rather tune by hand and then have the agent check that I didn't break something and run validation.
 6. Integration into a development branch.
 	- I also make sure to do any documentation cleanup and housekeeping here.
 7. Player playtesting and feedback.
 	- This is where you test your assumptions from the initial idea against reality.
 ## On Agentic Coding
-- Programming isn't a special, privileged skill to hold on a pedestal. There's still a vast amount of knowledge to gain from it, though.
+- Programming isn't a special, privileged skill to hold on a pedestal. That doesn't mean learning as much as you can about it won't help.
 - Nothing is stopping you from learning something. I've learned just as much, if not more, about game dev, game design, project management, business management, and software development this year as at any other point.
 - Read the documentation. Actually read the [Claude](https://code.claude.com/docs/en/overview) or [Codex](https://developers.openai.com/codex/) or [Unity](https://docs.unity3d.com/Manual/) manuals. Have some kind of idea of what is _supposed_ to happen.
 ## On Agentic Game Dev & Design
 - I never ask an agent for advice on high-level game design. I have it ask _me_.
 - Agents love writing test code that validates flaky game design variables, like text or tuning settings. Watch out for that.
 - Agents can be very bad at understanding what _your_ game is, how it works, and how all the pieces work together.
-- Remember to think about how you want to make edits to your game in the future, not just right now. How are you going to tune it? Where 
-- Current models often match patterns they find in your codebase. Studying resources like [Game Programming Patterns](https://gameprogrammingpatterns.com) will be super helpful. [Characteristics of Games](https://mitpress.mit.edu/9780262542692/characteristics-of-games/) is also great as a design-focused resource.
+- Remember to think about how you want to make edits to your game in the future, not just right now. How are you going to tune it? Where are the settings? How are you going to find them?
+- Current models match patterns they find in your codebase. Studying resources like [Game Programming Patterns](https://gameprogrammingpatterns.com) will help you understand high-level architecture.  [Characteristics of Games](https://mitpress.mit.edu/9780262542692/characteristics-of-games/) is also great as a design-focused resource.
 ## On Current Models
 - I typically use Low or Medium thinking levels.
-- [GPT 6.1 Sol](https://developers.openai.com/api/docs/models/gpt-6.1-sol) is very capable
+- [GPT 6.1 Sol](https://developers.openai.com/api/docs/models/gpt-6.1-sol) is very capable.
 ## Workflow hacks
 - Leave something unfinished when you stop working. You'll always know where to start the next day.
 # Agent Harness
