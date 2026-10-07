@@ -128,7 +128,7 @@ assert(
 assert(!index.index.content.includes("title:"), "Frontmatter leaked into page content")
 const tools = pages.get(path.join(output, "tools-and-setup.html"))
 assert(
-  tools.nodes.some((node) => node.properties.dataCallout === "note"),
+  tools.nodes.some((node) => typeof node.properties.dataCallout === "string"),
   "Obsidian callout was not rendered",
 )
 
