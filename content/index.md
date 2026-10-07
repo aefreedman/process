@@ -8,7 +8,7 @@ Methods, tools, and resources I use in my daily game development and design work
 
 This isn't exhaustive, and you don't need to adopt my whole setup. Start with the part relevant to what you're making, and follow the links to explore further.
 
-## Understand the approach
+## My approach
 
 - [[principles|Principles]] — my maxims, approach to learning, and views on working with agents.
 - [[development-workflow|Development workflow]] — the day-to-day development loop, planning, playtesting, and production resources.
