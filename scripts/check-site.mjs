@@ -132,6 +132,19 @@ assert(
   "Obsidian callout was not rendered",
 )
 
+assert(pages.has(path.join(output, "license.html")), "Missing content licensing page")
+for (const slug of ["index", ...Object.keys(guideNotes)]) {
+  const page = pages.get(path.join(output, `${slug}.html`))
+  assert(
+    page.nodes.some((node) => node.tagName === "a" && node.properties.href === `${siteUrl}license`),
+    `Missing content-license link: ${slug}`,
+  )
+}
+assert(
+  index.license.content.includes("CC BY-NC-SA 4.0"),
+  "Content license missing from published page",
+)
+
 console.log(
   `Site checks passed: ${pages.size} HTML pages, ${checked} internal links/resources, search data, wikilinks, callouts, and page contents.`,
 )

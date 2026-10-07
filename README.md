@@ -52,11 +52,17 @@ Do not use `quartz sync` for this repository: its upstream branch assumptions di
 - The graph and analytics are disabled.
 - `.github/workflows/site.yml`: validation and Pages deployment.
 
+## Licensing
+
+Unless otherwise noted, the original guide content in `content/` and its published form is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/): attribution, noncommercial use, and ShareAlike. See [LICENSE.txt](LICENSE.txt) for the full legal terms and [the guide's licensing page](content/license.md) for scope and suggested attribution.
+
+Quartz software remains MIT-licensed under [QUARTZ-LICENSE.txt](QUARTZ-LICENSE.txt). Third-party material and linked resources retain their respective licenses; the content license does not apply to them.
+
 ## Quartz source
 
 The website engine is [Quartz 5](https://quartz.jzhao.xyz/), vendored from [jackyzha0/quartz](https://github.com/jackyzha0/quartz) at commit `97a2d05f80c4c50534959b1d0d41cc4b3895625e`.
 
-Its MIT license is preserved in `QUARTZ-LICENSE.txt`; that license covers the upstream software, not an automatic license choice for the guide.
+Its MIT license is preserved in `QUARTZ-LICENSE.txt`; that license covers the upstream software, not the guide content.
 
 Local engine patch: the inline script loader resolves imports from the actual source path so builds also work when the Obsidian vault is accessed through a Windows junction.
 
