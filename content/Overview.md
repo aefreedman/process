@@ -1,3 +1,8 @@
+---
+title: Overview
+description: My daily game development and design methods, tools, and further reading.
+---
+
 # Contents
 - [Method](#method)
   - [Overall Strategy](#overall-strategy)
