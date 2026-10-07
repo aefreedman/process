@@ -14,7 +14,7 @@ I've previously used [OpenCode](https://opencode.ai/), but it's fussier to modif
 ### Packages and Extensions
 
 > [!WARNING]
-> If you're just starting out, I wouldn't use any tools or packages. Use only the bare minimum to get your tools to work. Ideally, make any package you need yourself.
+> If you're just starting out, I wouldn't use anyone else's packages. Use only the bare minimum to get your tools to work. Ideally, make any package you need yourself.
 
 > [!Info] Source
 > See [Pi packages](https://pi.dev/packages?name=%40aefree) or check my [GitHub](https://github.com/aefreedman)
