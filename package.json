@@ -13,7 +13,7 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "build": "node ./quartz/bootstrap-cli.mjs build",
+    "build": "node ./quartz/bootstrap-cli.mjs build --output public-build",
     "dev": "npm run install-plugins && node ./quartz/bootstrap-cli.mjs build --serve",
     "test:site": "node scripts/check-site.mjs",
     "docs": "npx quartz build --serve -d docs",

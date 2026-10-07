@@ -3,7 +3,7 @@ import { readFile, readdir, stat } from "node:fs/promises"
 import path from "node:path"
 import { fromHtml } from "hast-util-from-html"
 
-const output = path.resolve("public")
+const output = path.resolve("public-build")
 const siteUrl = new URL("https://aefreedman.github.io/process/")
 
 async function filesIn(directory) {

@@ -3,7 +3,7 @@ title: Game Dev & Design
 description: A practical guide to my daily game development and design workflow, tools, and further reading.
 ---
 
-A guide and reference for students: the methods, tools, and resources I use in my daily game development and design work.
+Methods, tools, and resources I use in my daily game development and design work.
 
 This isn't exhaustive, and you don't need to adopt my whole setup. Start with the part relevant to what you're making, and follow the links to explore further.
 

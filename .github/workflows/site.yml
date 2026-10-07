@@ -34,7 +34,7 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: public-build
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
