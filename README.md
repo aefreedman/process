@@ -2,7 +2,7 @@
 
 A practical guide and reference for students, covering my daily game development and design workflow and linking to resources for further exploration.
 
-**[Browse the guide](https://aefreedman.github.io/process/)** · [Read the Markdown](content/Overview.md)
+**[Browse the guide](https://aefreedman.github.io/process/)** · [Read the Markdown](content/index.md)
 
 ## Writing in Obsidian
 
@@ -10,7 +10,14 @@ The canonical notes and their attachments live in `content/`. Open that folder a
 
 The repository and guide are public. Quartz builds the contents of `content/`; repository documentation and website source files are outside that directory. Obsidian configuration and trash are not versioned.
 
-`Overview.md` remains a single guide for now. `content/index.md` is the website landing page. Wikilinks, heading links, callouts, and standard Markdown are supported.
+`content/index.md` is the website landing page, linking to four substantial notes:
+
+- [Principles](content/principles.md)
+- [Development workflow](content/development-workflow.md)
+- [Tools and setup](content/tools-and-setup.md)
+- [Unity](content/unity.md)
+
+Keep filenames lowercase and hyphenated, with readable titles in frontmatter. Notes have one canonical home and link to related topics rather than duplicating explanations. Wikilinks, heading links, callouts, and standard Markdown are supported.
 
 ## Local preview
 
@@ -52,7 +59,5 @@ The website engine is [Quartz 5](https://quartz.jzhao.xyz/), vendored from [jack
 Its MIT license is preserved in `QUARTZ-LICENSE.txt`; that license covers the upstream software, not an automatic license choice for the guide.
 
 Local engine patch: the inline script loader resolves imports from the actual source path so builds also work when the Obsidian vault is accessed through a Windows junction.
-
-Dependency status: compatible updates were applied during setup. npm still reports four high-severity entries caused by the transitive `braces` advisory (including its parent packages); npm currently offers no patched `braces` release. These dependencies run during building, not on a server behind the published static site. Recheck with `npm audit` when updating the engine.
 
 For engine upgrades, compare a newer upstream revision on a feature branch and retain our content, configuration, README, scripts, and deployment workflow. Then run the build and validation commands above before merging.

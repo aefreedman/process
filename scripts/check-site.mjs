@@ -40,7 +40,22 @@ for (const file of htmlFiles) {
 }
 
 assert(pages.has(path.join(output, "index.html")), "Missing homepage")
-assert(pages.has(path.join(output, "overview.html")), "Missing guide")
+const guideNotes = {
+  principles: "Principles",
+  "development-workflow": "Development Workflow",
+  "tools-and-setup": "Tools and Setup",
+  unity: "Unity",
+}
+for (const slug of Object.keys(guideNotes)) {
+  assert(pages.has(path.join(output, `${slug}.html`)), `Missing guide note: ${slug}`)
+}
+const noteFiles = (await filesIn(path.resolve("content"))).filter((file) => file.endsWith(".md"))
+for (const file of noteFiles) {
+  assert(
+    /^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(path.basename(file)),
+    `Invalid note filename: ${file}`,
+  )
+}
 assert(pages.has(path.join(output, "404.html")), "Missing 404 page")
 
 let checked = 0
@@ -83,26 +98,38 @@ for (const [file, page] of pages) {
 
 const index = JSON.parse(await readFile(path.join(output, "static/contentIndex.json"), "utf8"))
 assert.equal(index.index.title, "Game Dev & Design", "Homepage frontmatter was not parsed")
-assert.equal(index.overview.title, "Overview", "Guide frontmatter was not parsed")
-assert(index.index.links.includes("overview"), "Homepage wikilinks were not indexed")
-assert(index.overview.content.includes("General Development Loop"), "Guide missing from search")
+for (const [slug, title] of Object.entries(guideNotes)) {
+  assert.equal(index[slug]?.title, title, `Frontmatter was not parsed: ${slug}`)
+  assert(index.index.links.includes(slug), `Homepage wikilink was not indexed: ${slug}`)
+  assert(index[slug].content.length > 0, `Note missing from search: ${slug}`)
+  assert(
+    index[slug].links.some((link) => link in guideNotes),
+    `Missing cross-links: ${slug}`,
+  )
+  const page = pages.get(path.join(output, `${slug}.html`))
+  assert(
+    page.nodes.some((node) => (node.properties.className ?? []).includes("toc")),
+    `Missing generated table of contents: ${slug}`,
+  )
+  assert(
+    !page.nodes.some((node) => (node.properties.className ?? []).includes("graph")),
+    `Graph should be disabled: ${slug}`,
+  )
+}
+assert(
+  index["development-workflow"].content.includes("General Development Loop"),
+  "Development loop missing from search",
+)
+assert(!index.overview, "Old overview is still indexed")
 assert(
   !Object.values(index).some((page) => page.filePath === "README.md"),
   "Repository README was published",
 )
 assert(!index.index.content.includes("title:"), "Frontmatter leaked into page content")
-const overview = pages.get(path.join(output, "overview.html"))
+const tools = pages.get(path.join(output, "tools-and-setup.html"))
 assert(
-  overview.nodes.some((node) => node.properties.dataCallout === "note"),
+  tools.nodes.some((node) => node.properties.dataCallout === "note"),
   "Obsidian callout was not rendered",
-)
-assert(
-  overview.nodes.some((node) => (node.properties.className ?? []).includes("toc")),
-  "Missing generated table of contents",
-)
-assert(
-  !overview.nodes.some((node) => (node.properties.className ?? []).includes("graph")),
-  "Graph should be disabled",
 )
 
 console.log(

@@ -7,19 +7,16 @@ A guide and reference for students: the methods, tools, and resources I use in m
 
 This isn't exhaustive, and you don't need to adopt my whole setup. Start with the part relevant to what you're making, and follow the links to explore further.
 
-## Start here
+## Understand the approach
 
-- [[Overview#Maxims|Guiding principles]]
-- [[Overview#Overall Strategy|How I approach learning and working with agents]]
-- [[Overview#General Development Loop|The day-to-day development loop]]
+- [[principles|Principles]] — my maxims, approach to learning, and views on working with agents.
+- [[development-workflow|Development workflow]] — the day-to-day development loop, planning, playtesting, and production resources.
 
-## Browse the guide
+For a quick starting point, read the [[principles#Maxims|maxims]] and the [[development-workflow#General Development Loop|development loop]].
 
-- [[Overview#Method|Method]] — principles, workflow, and working with agents.
-- [[Overview#Agent Harness|Agent harness]] — Pi, packages, and my typical setup.
-- [[Overview#Dev tools|Development tools]] — editors, terminals, and other utilities.
-- [[Overview#Unity|Unity]] — working with agents and useful packages.
-- [[Overview#Version Control|Version control]] — Git and Unity Version Control.
-- [[Overview#Project Management|Project management]] — planning, tracking, and production resources.
+## Find a reference
 
-You can also [read the whole guide](Overview.md), or use search to find a specific topic.
+- [[tools-and-setup|Tools and setup]] — agent harness, packages, development tools, version control, and current model preferences.
+- [[unity|Unity]] — working with agents in the editor, plus useful packages and tools.
+
+Topics overlap: follow the links between notes, or use search to find specific advice.
