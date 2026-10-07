@@ -24,6 +24,6 @@ Topics overlap: follow the links between notes, or use search to find specific a
 
 ## Connect
 
-[Itch.io](https://aef.itch.io)
-[GitHub](https://aef.itch.io)
+ [![Itch.io](https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://aef.itch.io) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aefreedman)
+
 Email and Discord as well if you know how to find me.
