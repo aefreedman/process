@@ -13,7 +13,7 @@ This isn't exhaustive, and you don't need to adopt my whole setup. Start with th
 - [[principles|Principles]] — my maxims, approach to learning, and views on working with agents.
 - [[development-workflow|Development workflow]] — the day-to-day development loop, planning, playtesting, and production resources.
 
-For a quick starting point, read the [[principles#Maxims|maxims]] and the [[development-workflow#General Development Loop|development loop]].
+For a quick starting point, read the [[principles#Maxims|maxims]] and the [[development-workflow#Basic Loop|development loop]].
 
 ## Find a reference
 

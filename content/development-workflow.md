@@ -2,10 +2,22 @@
 title: Development Workflow
 description: The day-to-day development loop, planning, playtesting, and production resources.
 ---
+## Basic Loop
 
-## General Development Loop
+1. I pick a task from my backlog.
+2. Iterate on the plan with an agent.
+3. Record the plan outside of the agent session.
+4. Execute the plan.
+5. Developer playtesting and review.
+6. Documentation cleanup and housekeeping.
+7. Integration into a development branch.
+8. Player playtesting and feedback.
+9. Make follow-up tasks.
 
-1. I pick a task from my backlog and iterate on a plan with an agent. I'm looking for a plan that aligns with my expectations and is of an appropriate scope.
+## Loop (Detailed)
+
+1. I pick a task from my backlog.
+	- Iterate on the plan with an agent. I'm looking for a plan that aligns with my expectations and is of an appropriate scope.
     - If the initial feature description is poorly defined, I have the agent check for relevant context and ask me a few targeted questions. I make sure to tell the agent what I want it to focus on. My goal is to get my intent into context, so the agent doesn't make its own decision. Often, agents will return with recommended answers. If you're not good at ignoring suggestions, you might want to tell it not to do that.
     - Decide on a "definition of done" here. Have an expectation of what you want to happen and what is or isn't acceptable. This is about giving yourself permission to finish working on this task and move on.
     - See my [effort estimation rubric](https://github.com/aefreedman/pi-project-management/blob/main/skills/estimating-effort/references/scoring-model.md) for an idea of how I estimate scope. My rule-of-thumb is "effort: 3" is the target. Effort is not a measure of time.
@@ -24,6 +36,13 @@ description: The day-to-day development loop, planning, playtesting, and product
 7. Player playtesting and feedback.
     - This is where you test your assumptions from the initial idea against reality.
 
+## Session Review
+
+If you use a self-inspectable harness like Pi, you can have the agent inspect its own logs and check for errors. I use this to find bugs and workflow issues in my tooling, usually at the end of a week or month.
+
+> Check all session logs from the past [date-range] and check for issues with [insert targets].
+
+Even better: make a package to help you do that. I did.
 ## Workflow hacks
 
 - Leave something unfinished when you stop working. You'll always know where to start the next day.

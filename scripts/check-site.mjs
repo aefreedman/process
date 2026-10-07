@@ -117,7 +117,7 @@ for (const [slug, title] of Object.entries(guideNotes)) {
   )
 }
 assert(
-  index["development-workflow"].content.includes("General Development Loop"),
+  index["development-workflow"].content.includes("Basic Loop"),
   "Development loop missing from search",
 )
 assert(!index.overview, "Old overview is still indexed")
