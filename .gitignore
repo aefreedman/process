@@ -1,0 +1,12 @@
+node_modules/
+public/
+public-build/
+.quartz/
+.quartz-cache/
+prof/
+*.tsbuildinfo
+.obsidian/
+.trash/
+.DS_Store
+quartz/cli/tui/dist/
+.turbo/
