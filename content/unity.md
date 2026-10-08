@@ -40,6 +40,8 @@ my-game/              # Git: shared instructions and setup
 - Route tools to the exact project path, not whichever Editor happens to be open. For MCP, I keep one named connection per copy, such as `unity_ws2`, targeting `ws2/game-unity`. Check the reported project path before making changes.
 - Make sure to instruct agents *not* to create new workspaces (as if they were using git worktrees). They'll get stuck in a long initial asset import.
 - This setup scales to any amount of workspaces. Practically speaking, I've never needed more than three. This is partially due to attention and mental load, and partially to avoid merge conflicts.
+- Keeping track of which Editor instance is which when you need to use them is tricky. The UnityVCS branch indicator is the most fool-proof way I've found.
+- This setup works with other version control setups, with some modifications. I've done pure UnityVCS and pure Git as well.
 
 I keep workspace-routing rules in a shared YAML file so tools don't each need their own hardcoded paths. A simple version could look like this:
 

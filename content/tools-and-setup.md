@@ -14,12 +14,9 @@ I've previously used [OpenCode](https://opencode.ai/), but it's fussier to modif
 ### Packages and Extensions
 
 > [!WARNING]
-> If you're just starting out, I wouldn't use anyone else's packages. Use only the bare minimum to get your tools to work. Ideally, make any package you need yourself.
+> If you're just starting out, I recommend not using anyone else's packages. If you need something, make it yourself!
 
-> [!Info] Source
-> See [Pi packages](https://pi.dev/packages?name=%40aefree) or check my [GitHub](https://github.com/aefreedman)
-
-My packages are focused on tool-use and skills for CLIs and APIs that don't have coverage yet.
+My packages are focused on tool-use and skills for CLIs and APIs that don't have coverage yet. See [Pi packages](https://pi.dev/packages?name=%40aefree) or check my [GitHub](https://github.com/aefreedman)
 
 The most frequently developed packages are [`pi-codecks`](https://pi.dev/packages?name=%40aefree%2Fpi-codecks), [`pi-plastic`](https://pi.dev/packages?name=%40aefree%2Fpi-plastic), and [`pi-unity`](https://pi.dev/packages?name=%40aefree%2Fpi-unity), with [`pi-unity-docs`](https://pi.dev/packages?name=%40aefree%2Fpi-unity-docs) an important secondary package. [`pi-themes`](https://pi.dev/packages?name=%40aefree%2Fpi-themes) has Solarized Light and Dark themes. Many of the other ones are experiments or niche workflow aids of questionable helpfulness.
 
@@ -49,16 +46,23 @@ Packages are mine unless otherwise noted.
     - OSX/Linux: [zsh](https://www.zsh.org/), [tmux](https://github.com/tmux/tmux/wiki), [WezTerm](https://wezterm.org/)
     - Windows: [Powershell 7](https://learn.microsoft.com/powershell/), [Windows Terminal](https://learn.microsoft.com/windows/terminal/), [WezTerm](https://wezterm.org/)
     - powerline renderer: [oh-my-posh](https://ohmyposh.dev/)
-    - git: [serie](https://github.com/lusingander/serie)
     - markdown: [glow](https://github.com/charmbracelet/glow)
+- Version Control
+	- git
+		- [serie](https://github.com/lusingander/serie)
+		- [SourceTree](www.sourcetreeapp.com)
+	- UnityVCS
+		- my [fork](https://github.com/aefreedman/serie) of serie supports UnityVCS
+		- You have to use the official GUI app for a lot still, like auth
 - Containerization: [Docker](https://docs.docker.com/get-started/)
 - Remote Access:
     - [Tailscale](https://tailscale.com/)
     - [Parsec](https://parsec.app/)
     - [Windows RDP](https://learn.microsoft.com/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access) as backup
 - IDE: [VS Code](https://code.visualstudio.com/)
-    - I basically turn everything off and just use it as a file browser with syntax highlighting
-- Text editor
+    - I turn everything off and just use it as a file browser with syntax highlighting.
+    - I use [JetBrains Rider](https://www.jetbrains.com/rider/) when I need a full-blown IDE, which is never, anymore.
+- Markdown editor
     - [Obsidian](https://obsidian.md/) -> see [aefreedman/obsidian-mono](https://github.com/aefreedman/obsidian-mono)
 - [Windows PowerToys](https://learn.microsoft.com/windows/powertoys/). Highlights: adds [native .md viewing](https://learn.microsoft.com/windows/powertoys/file-explorer) to Windows Explorer. [FancyZones](https://learn.microsoft.com/windows/powertoys/fancyzones) is also useful for managing multiple instances of windows from the same app
 - Fonts:
